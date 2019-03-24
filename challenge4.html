@@ -17,6 +17,7 @@
         margin:0 auto;
         background-repeat: no-repeat;
         color:#FFFFFF;
+        text-shadow: 1.5px 1.5px black;
         text-align: center;
         background-color: #8e68ff;
         background-size: 100%;
@@ -37,8 +38,14 @@
     </style>
 
     <script>
-    // I used Two functions here.  Starter idea at: 
-    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(previewPic){
+      document.getElementById('image').style.backgroundImage = "url("+previewPic.src+")";
+      document.getElementById('image').innerHTML = previewPic.alt;
+    }
+    function unDo(){
+      document.getElementById('image').style.backgroundImage = "url('')";
+      document.getElementById('image').innerHTML = 'Hover or tab over/into an image below.';
+    }
     </script>
 </head>
 
@@ -49,20 +56,54 @@
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" 
-            alt = "Styling with a Bandana" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg">
+        <img class = "preview" tabindex = "1"
+            alt = "Laker Game"
+            src = "https://www.dropbox.com/s/z4hp6yyxyu9qf0s/lakers.jpeg?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
 
-
-        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
-        <img class = "preview" 
-            alt = "With My Boy" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG">
-    
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
-            alt = "Young Puppy">
+        <img class = "preview" tabindex = "2"
+            alt = "Snow Day"
+            src = "https://www.dropbox.com/s/oazyepeqc7lgs9c/snow.jpeg?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "3"
+            alt = "Friends"
+            src = "https://www.dropbox.com/s/r3vdy3ul7xnyk5o/friends.JPG?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
+
+        <img class = "preview" tabindex = "4"
+            alt = "Family :)"
+            src = "https://www.dropbox.com/s/66m1ctodxkqip18/family1.jpeg?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
+
+        <img class = "preview" tabindex = "5"
+            alt = "More Family :)"
+            src = "https://www.dropbox.com/s/jpdmiirqouhcop9/family2.jpeg?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
+
+        <img class = "preview" tabindex = "6"
+            alt = "Barton Hills"
+            src = "https://www.dropbox.com/s/g7gt7aq2vdymw4a/barton.jpeg?raw=1"
+            onfocus="upDate(this)"
+            onmouseover="upDate(this)"
+            onblur = "unDo()"
+            onmouseout = "unDo()">
 </body>
 </html>
-    

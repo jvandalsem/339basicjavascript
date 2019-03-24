@@ -3,18 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Challenge 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <style>
 
-    .errormsg { 
-        /*font: Use a cool Google font*/
-      color:red;
-      display:none; } 
+    .errorMsg {
+      font-family: 'Ubuntu', sans-serif;
+      color: red;
+      display: none;
+    }
+
     </style>
-    
+
     <script>
+
     function checkForm(){
-      // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
-    }  
+      var isEmpty = true;
+      if(document.getElementById('name').value === ''){
+        document.getElementById('nameError').style.display = 'block';
+        isEmpty = false;
+      }
+      else {
+        document.getElementById('nameError').style.display = 'none';
+      }
+      if(document.getElementById('addr').value === ''){
+        document.getElementById('addressError').style.display = 'block';
+        isEmpty = false;
+      }
+      else {
+        document.getElementById('addressError').style.display = 'none';
+      }
+      return isEmpty;
+    }
+
     </script>
 </head>
 <body>
@@ -31,7 +51,7 @@
             <input type="text" name="addr" id="addr">
             <p class="errorMsg" id="addressError">Please enter your street address!</p>
         </fieldset>
-        <input type="submit" value="Submit it!"> 
+        <input type="submit" value="Submit it!">
     </form>
 </body>
 </html>
